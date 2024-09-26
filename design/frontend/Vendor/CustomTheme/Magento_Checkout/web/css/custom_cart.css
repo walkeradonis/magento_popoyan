@@ -1,0 +1,13 @@
+button.action.primary.checkout,
+button.action.primary.update {
+    background-color: #33ffb1; 
+    color: #a6ffff; 
+    border: none;
+    padding: 10px 20px;
+    border-radius: 6px;
+}
+
+button.action.primary.checkout:hover,
+button.action.primary.update:hover {
+    background-color: #3cb9e7;
+}

@@ -1,0 +1,10 @@
+<?php
+$product = $block->getProduct();
+?>
+
+<div class="product-name">
+    <h1><?= $product->getName() ?></h1>
+    <?php if ($product->getData('is_new')): ?>
+        <span class="new-product-label">¡Nuevo!</span>
+    <?php endif; ?>
+</div>

@@ -1,0 +1,39 @@
+<?php
+$products = $block->getFeaturedProducts();
+?>
+<div class="featured-products-grid">
+<!--El foreach recorre los 5 productos -->
+    <?php foreach ($products as $product): ?>
+        <div class="featured-product-item">
+            <a href="<?= $product->getProductUrl() ?>">
+                <img src="<?= $block->getImageUrl($product) ?>" alt="<?= $product->getName() ?>" />
+            </a>
+            <h2><?= $product->getName() ?></h2>
+            <p class="price"><?= $product->getPriceInfo()->getPrice('final_price')->getAmount()->getValue() ?> <?= $block->getPriceCurrency()->getCurrencySymbol() ?></p>
+        </div>
+    <?php endforeach; ?>
+</div>
+
+<style>
+    .featured-products-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+    }
+    .featured-product-item {
+        border: 1px solid #ddd;
+        padding: 15px;
+        text-align: center;
+    }
+    .featured-product-item img {
+        max-width: 100%;
+        height: auto;
+    }
+    .featured-product-item h2 {
+        font-size: 1.2em;
+    }
+    .featured-product-item .price {
+        color: #f00;
+        font-weight: bold;
+    }
+</style>

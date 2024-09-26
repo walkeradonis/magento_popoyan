@@ -1,0 +1,9 @@
+.new-product-label {
+    display: inline-block;
+    background-color: red;
+    color: white;
+    padding: 5px 10px;
+    font-weight: bold;
+    border-radius: 3px;
+    margin-left: 10px;
+}

@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+        <!-- Este bloque de codigo permite añadir un mensaje personalizado en un bloque -->
+        <referenceContainer name="cart.additional">
+            <block class="Magento\Framework\View\Element\Text" name="custom_cart_message">
+                <arguments>
+                    <argument name="text" xsi:type="string">¡No olvides revisar nuestros productos destacados!</argument>
+                </arguments>
+            </block>
+        </referenceContainer>
+    </body>
+</page>
